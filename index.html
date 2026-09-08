@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plan Cloudera CDP · Cursos 2026</title>
+  <meta name="description" content="Planificación pública de cursos Cloudera / CDP. Fase 1 Essential, Fase 2 L2 on-demand y Fase 3 ILT. Septiembre–diciembre 2026." />
+  <meta property="og:title" content="Plan Cloudera CDP · Cursos 2026" />
+  <meta property="og:description" content="Ruta de aprendizaje, calendario semanal y catálogo con links a Cloudera Education." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect rx='12' width='64' height='64' fill='%230d7377'/><text x='32' y='42' text-anchor='middle' font-size='28' fill='white' font-family='sans-serif'>C</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Cloudera Education · CDP</div>
+      <h1>Planificación de cursos 2026</h1>
+      <p class="lede">
+        Calendario compartido desde el 7 de septiembre hasta el 23 de diciembre de 2026.
+        Fase 1 cierra los Essential on-demand, Fase 2 recorre los L2 largos y Fase 3 queda para ILT / pagos.
+        Cada visitante puede marcar su propio avance (se guarda solo en este navegador).
+      </p>
+      <div class="kpis" id="kpis"></div>
+    </div>
+  </header>
+  <div class="wrap">
+    <nav class="tabs" id="tabs">
+      <button class="active" data-view="plan">Plan semanal</button>
+      <button data-view="paths">Learning paths</button>
+      <button data-view="catalogo">Catálogo</button>
+      <button data-view="ilt">ILT y pagos</button>
+    </nav>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Buscar curso, código o path…" />
+      <select id="pathFilter">
+        <option value="">Todos los learning paths</option>
+      </select>
+      <select id="faseFilter">
+        <option value="">Todas las fases</option>
+        <option value="0">Fase 0 · Hecho</option>
+        <option value="1">Fase 1 · Essential</option>
+        <option value="2">Fase 2 · L2 on-demand</option>
+        <option value="3">Fase 3 · ILT / pago</option>
+      </select>
+    </div>
+    <section id="view-plan"></section>
+    <section id="view-paths" class="hidden"></section>
+    <section id="view-catalogo" class="hidden"></section>
+    <section id="view-ilt" class="hidden"></section>
+    <footer>
+      Fuente: plan interno de cursos Cloudera CDP. Links apuntan a Cloudera Education.
+      El avance personal no se comparte; vive en localStorage de tu navegador.
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
